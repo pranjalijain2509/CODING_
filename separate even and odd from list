@@ -1,0 +1,21 @@
+#separate even and odd from list
+
+def sep(l):
+    even=[]
+    odd=[]
+    for i in l:
+        if i%2==0:
+            even.append(i)
+        else:
+            odd.append(i)
+    return even,odd
+#a function can return multiple value and it returns as tuple
+l=[10,11,20,23,45]
+#then we unpack the tuple
+even_list,odd_list=sep(l)
+print(even_list)
+print(odd_list)
+
+output-
+[10, 20]
+[11, 23, 45]
