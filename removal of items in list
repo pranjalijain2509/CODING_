@@ -1,0 +1,28 @@
+#list in python
+#removal of items
+
+l=[10,20,30,40,50,60,70,80,90]
+#in remove we give the element and if that element is not present ot gives value error
+l.remove(20)
+print(l)
+#it removes the last element of the list
+print(l.pop())
+print(l)
+#it removes the element from the list at the given index number
+print(l.pop(2))
+print(l)
+#it deletes the element in list at the given index number
+del l[1]
+print(l)
+#it deletes the element from the list in the given index first one is inclusive while next one id exclusive
+del l[0:2]
+print(l)
+
+output-
+[10, 30, 40, 50, 60, 70, 80, 90]
+90
+[10, 30, 40, 50, 60, 70, 80]
+40
+[10, 30, 50, 60, 70, 80]
+[10, 50, 60, 70, 80]
+[60, 70, 80]
