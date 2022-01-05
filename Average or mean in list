@@ -1,0 +1,22 @@
+#Average or mean in list
+
+#method 1
+def avge(l):
+    sum=0
+    for i in l:
+        sum=sum+i
+    n=len(l)
+    return sum/n
+l=[10,20,30,40]
+print(avge(l))
+print()
+#method 2
+def averag(l):
+    return sum(l)/len(l)
+l=[10,20,30,30]
+print(averag(l))
+
+output-
+25.0
+
+22.5
