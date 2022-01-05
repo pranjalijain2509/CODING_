@@ -1,0 +1,53 @@
+#Second largest in the list
+#Method 1
+def second_large1(l):
+    h=set(l)
+    k=list(h)
+    k.sort()
+    return k[-2]
+l=[12,34,1,45,67,67]
+print(second_large1(l))
+
+#Method 2 - Two traversal - big o(n)
+def second_large2(l):
+    if len(l)<=1:
+        return None
+    large=getlar(l)
+    sec_lar=None
+    for i in l:
+        if i!=large:
+            if sec_lar==None:
+                sec_lar=i
+            else:
+                sec_lar=max(sec_lar,i)
+    return sec_lar
+def getlar(l):
+    res=l[0]
+    for i in range(1,len(l)):
+        if l[i]>res:
+            res=l[i]
+    return res
+l=[12,34,1,44,67,67]
+print(second_large2(l))
+
+#Method 3 - Single Traversal - big o(n)
+def second_large3(l):
+    if len(l)<=1:
+        return None
+    lar=l[0]
+    slar=None
+    for i in l[1:]:
+        if i>lar:
+            slar=lar
+            lar=i
+        elif i!=lar:
+            if slar==None or slar<i:
+                slar=i
+    return slar
+l=[12,34,1,42,67,67]
+print(second_large3(l))
+
+Output-
+45
+44
+42
