@@ -1,0 +1,14 @@
+#Get smaller elements
+
+def smalle(l,x):
+    res=[]
+    for i in l:
+        if i<x:
+            res.append(i)
+    return res
+l=[8,23,1,56,7]
+x=10
+print(smalle(l,x))
+
+Output-
+[8, 1, 7]
