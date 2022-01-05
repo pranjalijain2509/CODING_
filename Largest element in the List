@@ -41,7 +41,6 @@ def larg4(l):
         return res
 l=[114,32,1,45,67,98]
 print(larg4(l))
-
 Output-
 67
 98
