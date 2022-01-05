@@ -1,0 +1,27 @@
+#Find only odd occurrence number in the list
+#Method 1
+def odd_occ(l):
+    res=None
+    for i in l:
+        co=l.count(i)
+        if co%2!=0:
+            res=i
+            break #It break out of loop
+    return res #It break out of the function
+l=[10,20,30,20,10]
+print(odd_occ(l))
+
+#Method 2 -Bitwise XOR it returns 0 when both of them are same and return 1 when they are different
+# x^0 gives x
+# x^x gives 0
+def odd_occc(l):
+    res=0
+    for i in l:
+        res=res^i
+    return res
+l=[10,20,30,30,10]
+print(odd_occc(l))
+
+Output-
+30
+20
