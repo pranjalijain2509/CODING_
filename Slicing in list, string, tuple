@@ -1,0 +1,41 @@
+#Slicing
+#In list,string,tuple
+#l[start:stop:step]- we start with l[start], l[start+step] and so on and stop is not included
+
+l=[10,20,30,40,50]
+print(l[0:5:2])
+print(l[:4])#start is not mention so by default it is 0 and step is also not mentioned so by default 1
+print(l[2:])#stop is not mention so by default it will be till the end of the list and step is also not mentioned so by default 1
+print(l[1:4])#start is 1 stop is (4-1) so 3 ans step is 1
+print(l[4:1:-1])#start is 4 and stop is at index 2 and step is -1 so start has to be greater than stop
+#Reverse
+print(l[-1:-6:-1])#we start from end to beginning of the list and step is -1
+print(l[::-1])#we do not mention start and stop we just mention step which is -1 and in this case start by default becomes -1 and stop as -(len of list+1)
+#print the list as it is
+print(l[0:5])#start is index 0 stop is index (5-1) which is 4 and step by default is 1
+print(l[:])#start by default is 0 and stop is index of len of list -1 and step is 1 by default
+
+
+l=[10,20,30]
+l1=l[:]#we are making copy of the list
+t=(10,20,30)
+t1=t[:]#we are making copy of the tuple
+s="geeks"
+s1=s[:]#we are making copy of the string
+print(l1 is l)#this is false because they do not point to the same
+print(t1 is t)#they point to the same tuple
+print(s1 is s)#they pount to the same string
+
+Output-
+[10, 30, 50]
+[10, 20, 30, 40]
+[30, 40, 50]
+[20, 30, 40]
+[50, 40, 30]
+[50, 40, 30, 20, 10]
+[50, 40, 30, 20, 10]
+[10, 20, 30, 40, 50]
+[10, 20, 30, 40, 50]
+False
+True
+True
