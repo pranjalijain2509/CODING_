@@ -15,7 +15,7 @@ l=[12,32,1,45,67,98]
 print(larg2(l))
 print()
 
-#Method 3
+#Method 3 - time complexity big o(n^2)
 def larg3(l):
     for i in l:
         for j in l:
@@ -29,7 +29,7 @@ l=[112,32,1,45,67,98]
 print(larg3(l))
 print()
 
-#Method 4
+#Method 4 - time complexity is big o(n)
 def larg4(l):
     if not l:
         return None
