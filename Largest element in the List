@@ -1,0 +1,49 @@
+#Largest element in the List
+
+#Method 1
+def larg1(l):
+    return max(l)
+l=[12,32,1,45,67]
+print(larg1(l))
+print()
+
+#Method 2
+def larg2(l):
+    l.sort()
+    return l[-1]
+l=[12,32,1,45,67,98]
+print(larg2(l))
+print()
+
+#Method 3
+def larg3(l):
+    for i in l:
+        for j in l:
+            if j>i:
+                break
+        else:
+            return i
+    return None
+
+l=[112,32,1,45,67,98]
+print(larg3(l))
+print()
+
+#Method 4
+def larg4(l):
+    if not l:
+        return None
+    else:
+        res=l[0]
+        for i in range(1,len(l)):
+            if l[i]>res:
+                res=l[i]
+        return res
+l=[114,32,1,45,67,98]
+print(larg4(l))
+
+Output-
+67
+98
+112
+114
