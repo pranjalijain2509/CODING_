@@ -1,0 +1,42 @@
+#list in python
+#General purpose function
+
+l=[10,40,20,50]
+#it returns the maximum element from the list
+print(max(l))
+#it returns the minimum element from the list
+print(min(l))
+#it returns the sum of all the elements in list
+print(sum(l))
+#it reverses the list 
+l.reverse()
+print(l)
+#it sort the array 
+l.sort()
+print(l)
+
+print()
+
+l=["ebc","abc","gfg","lop"]
+#it returns the lexographically largest in the list
+print(max(l))
+#it returns the lexographically smallest in the list
+print(min(l))
+#it reverses the list
+l.reverse()
+print(l)
+#it sort the list in lexographical manner
+l.sort()
+print(l)
+
+output-
+50
+10
+120
+[50, 20, 40, 10]
+[10, 20, 40, 50]
+
+lop
+abc
+['lop', 'gfg', 'abc', 'ebc']
+['abc', 'ebc', 'gfg', 'lop']
