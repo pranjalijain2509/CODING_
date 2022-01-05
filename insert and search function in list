@@ -1,0 +1,27 @@
+#list in python
+#insert and search function
+
+l=[10,20,30,40,50]
+#append inserts the element at the end of the list 
+#in append we provide the element to be inserted
+l.append(30)
+print(l)
+#with help of insert we provide thr index number and then the element to be inserted
+l.insert(1,15)
+print(l)
+#to check that the elemnt exist in the list or not
+print(15 in l)
+#count the occourance of element 30 in the list
+print(l.count(30))
+#it gives the index of element and it gives the first occourance
+print(l.index(30))
+#it gives the index number but it also has the range 4 is inclusive and 7 is exclusive that means from 4 to 7-1 which is 6
+print(l.index(30,4,7))
+
+Output-
+[10, 20, 30, 40, 50, 30]
+[10, 15, 20, 30, 40, 50, 30]
+True
+2
+3
+6
