@@ -1,0 +1,16 @@
+#Advantage
+#1. Random access
+#2. Cash friedly
+
+#Disadvantage
+#1. Insertion and deletion is slow
+#2. search is slow foe unsorted data
+
+#How dynamic size work
+#preallocate extra space
+#If become full do the following
+  #1. allocate a new space of larger size
+  #2. copy old space to new
+  #3. free old space
+
+#append and pop takes constant time
