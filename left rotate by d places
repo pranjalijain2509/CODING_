@@ -1,0 +1,29 @@
+#left rotate by d places
+#Method 1 using slicing
+l=[10,20,30,40,50]
+d=2
+new_l=l[d:]+l[:d]
+print(new_l)
+
+#Method 2 using deque
+from collections import deque
+l=[10,20,30,40,50]
+d=3
+dq=deque(l)
+dq.rotate(-d)
+new_lo=list(dq)
+print(new_lo)
+
+#Method 3 big o(nd)
+def rotate_by_d(l,d):
+    for i in range(0,d):
+        l.append(l.pop(0))
+    return l
+l=[10,20,30,40,50]
+d=2
+print(rotate_by_d(l,d))
+
+Output-
+[30, 40, 50, 10, 20]
+[40, 50, 10, 20, 30]
+[30, 40, 50, 10, 20]
