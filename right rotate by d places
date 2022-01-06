@@ -1,0 +1,19 @@
+#right rotate by d places
+#Method 1
+l1=[1,2,3,4,5]
+d=4
+l1 = l1[-d:] + l1[:-d] 
+print(l1)
+
+#Method 2
+from collections import deque
+l=[1,2,3,4,5]
+d=4
+dq=deque(l)
+dq.rotate(d)
+nw=list(dq)
+print(nw)
+
+Output
+[2, 3, 4, 5, 1]
+[2, 3, 4, 5, 1]
