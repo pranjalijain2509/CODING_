@@ -1,0 +1,8 @@
+#hashing is an effective data structure for search, insert and delete it takes big o(n)
+#if we consider array and let say data is in sorted manner then search will be big o(log n) and insert and delete will be big o(n)
+#if we consider array and let say data is in unsorted manner then search will be big o(n) and insert and delete will be big o(1)
+#if we take avl tree or red black tree then search, insert and delete it takes big o(log n)
+#hasing is not used for -
+    #1. Finding closet value- AVL or Red Black tree
+    #2. sorted Data- AVL or Red Black tree
+    #3. prefix searching- Trie
