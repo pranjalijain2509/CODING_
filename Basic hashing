@@ -1,4 +1,4 @@
-#hashing is an effective data structure for search, insert and delete it takes big o(n)
+#hashing is an effective data structure for search, insert and delete it takes big o(1)
 #if we consider array and let say data is in sorted manner then search will be big o(log n) and insert and delete will be big o(n)
 #if we consider array and let say data is in unsorted manner then search will be big o(n) and insert and delete will be big o(1)
 #if we take avl tree or red black tree then search, insert and delete it takes big o(log n)
