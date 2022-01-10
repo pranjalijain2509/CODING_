@@ -1,0 +1,21 @@
+#direct addressing- the problem with it is that it could only be used for small values and these can be the index of the array 
+#while if there are large universe of keys and in this we apply hash function so they become small and thenit could be used as index of the array
+#eg which could not be done by direct addressing is phone number, name, employyee id(E1704)
+#Hash function convert large universe of key into small value which will be index of hash table
+#How hash function works
+    #should always map a large key to same small key
+    #should generate value from 0 to m-1 where m is the size of hash table
+    #should be fast O(1) for integer and O(len) for string of length 'len'
+    #should uniformly distribute large keys into hash table slots
+    
+#Example of hash function-
+#h(large key)=large key%m where m is the size of hash table and large key is the universal key
+#and size of hash table should be propotional to the number of elements to be inserted 
+#m should be prime number close to your hash table size due to better distributionbad vaue of m can not be power of 2 or 10
+#when more than 1 large key point to same index then collison would happen
+
+#for string we will not be using sum of ascii value of all and then % m because then all the permutation will go to the same index
+#for string we will be using weighted sum in this say str="abc" so str[0]*x^0+str[1]*x^1+str[2]*x^2 and we will consider any value of x
+
+#universal hasing is basicall there is group of hash function and it is picking one of the hash function randomy and it is applied on the key
+
