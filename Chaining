@@ -1,0 +1,29 @@
+#Chaining
+#let suppose we have keys like 50,21,58,17,15,49,56,22,23,25 
+#let suppose we have hash function= key%7 
+#let suppose we have hash table of size 7 that is from 0 to 6 and this is array of linked list header
+#at undex 0 = 21->49->56
+#at index 1 = 50->15->22
+#at index 2 = 58->23
+#at index 3 = 17
+#at index 4 = 25
+#index 5 and 6 are empty
+
+#Performace
+#m is number of slots in hash table
+#n is number of keys to be inserted
+#load factor(alpha)=n/m if we have small table size or more load factor then their would be more collision
+#expected chain length = alpha
+#expected time to search = O(1+alpha) , 1 is for hash function computation and alpha for chain length
+#expexted time to insert/delete= O(1+alpha) , 1 is for hash function computation and alpha for chain length
+
+#Data structure for storing chain
+#Linked list - let say "l" is the length of the linked list 
+    #search, insert and delete is O(l)
+    #Diadvantage is that it is not cash friendly and it requires extra space to store next pointer
+#Dynamic size array(list in python) - let say "l" is the length of the array
+    #search, insert and delete is O(l)
+    #It is cash friendly
+#Self balancing BST(AVL and Red Black tree)- let say "l" is the size of tree
+    #search, insert and delete is O(log l)
+    #Diadvantage is that it is not cash friendly
