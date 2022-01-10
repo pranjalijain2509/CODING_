@@ -1,0 +1,10 @@
+#Collision handling
+#They are bound to happen if more than 1 key will point to the same index in the hash table
+
+#we we know the key in advance then we can do perfect hashing
+#if we do not know the key then we can use one of the following
+    #chaining 
+    #open addressing 
+        #linear probling
+        #Quadratic Probling
+        #Double hashing
