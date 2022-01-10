@@ -1,0 +1,35 @@
+#Implementation of chaining in Python
+class Myclass:
+    def __init__(self,b):
+        self.Bucket=b
+        self.table=[[] for x in range(b)]
+    def insert(self,x):
+        i=x%self.Bucket
+        self.table[i].append(x)
+    def remove(self,x):
+        i=x%self.Bucket
+        if x in self.table[i]:
+            self.table[i].remove(x)
+    def search(self,x):
+        i=x%self.Bucket
+        return x in self.table[i]
+    
+h=Myclass(7)
+h.insert(70)
+h.insert(71)
+h.insert(9)
+h.insert(56)
+h.insert(72)
+print(h.search(56))
+h.remove(56)
+print(h.search(56))
+
+#This creates a hash function whose bucket size is 7 that means hash table is from 0 to 6 and initally it will create an empty list of list
+#For this hash function is x%bucket
+#insert function is it will first find the index number and then it will append x in the at the given index
+#remove function it will find the index number and if that element is the table at that particular index so it will remove if that element is not there it will not remove if condition is not there it will create problem becuase if element is not present and we apply remove then it will give error 
+#search function it will find the index number and using "in" it will check if element is present or not
+
+Output-
+True
+False
