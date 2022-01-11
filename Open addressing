@@ -1,0 +1,50 @@
+#Open addressing
+#It is one of the way to handle collision
+#The condition where open addressing csn be used is-
+    #1. No of slots in hash table >= no of keys to be inserted
+#It's advantage is that is is cache Friendly
+
+#Linera probing - It linearly search for next empty slot when there is a collision
+#Example 1
+#say elements are 50,51,49,16,56,15,19 and hash function is hash(key)=key%7
+#50 so it will go to index 1
+#51 so it will go to index 2
+#49 so it will go to index 0
+#16 it is suppose to go index 2 but it is full so it will find next empty slot which is at index 3 so it will go there
+#56 it is suppose to go index 0 but it is full so it will find next empty slot which is at index 4 so it will go there
+#15 it is suppose to go index 1 but it is full so it will find next empty slot which is at index 5so it will go there
+#19 it is suppose to go index 5 but it is full so it will find next empty slot which is at index 6 so it will go there
+#It is circular in manner
+
+#Example 2
+#say elements are 48,42,50,55,53 and hash function is hash(key)=key%7
+#48 so it will go to index 6
+#42 so it will go to index 0
+#50 so it will go to index 1
+#55 it is suppose to go index 6 but it is full so it will find next empty slot which is at index 2 so it will go there
+#53 so it will go to index 4
+
+#insert(50),insert(51),insert(15),search(15),delete(51),search(15)
+#hash funcion=key%7
+#insert 50%7 so index 1 
+#insert 51%7 so index 2
+#insert 15%7 it is suppose to go index 1 but it is full so it will find next empty slot which is at index 3 so it will go there
+#search we compute hash function we need to that index and compute if we find we return true otherwise we linearly search we stop when one of the three cases arise 1. empty set 2. Key found 3.Traversal through the hash table
+#problem with simply making slot empty when we delete is when we delete 51 and in above cases we have specified when our search will return false so next when there is 15 but still it will return false instead we will mark it deleted and element can get inserted in the deleted slot
+
+#clustering(a problem with linear probing)
+#if there are consecutive element in hash table say k element so there is cluster of k elements so if any element comes and if element maps to any of these index then cluster grow from k to k+1 beacuse it find new index lineraly and as a resut insert,search and delete become costly and impact the performance.
+
+#How to handle clustering problem with linear probling
+#1.linear probing
+#hash(key,i)=(h(key)+i)%m
+#In this we have primary clustering becuase it finds next place linearly
+
+#2.Quadractic probing
+#hash(key,i)=(h(key)+i^2)%m
+#In this we have secondary clustering becuase it finds next place i^2 times
+#the way to find place sometimes creates problem because it find i^2 and it has vacant place but still could not be able to find and it guarante finding of index to store element is if load factor <0.5 and m is a prime number
+
+#3.Double hashing
+#hash(key,i)=(h1(key)+i*h2(key))%m
+
