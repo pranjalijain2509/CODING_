@@ -9,6 +9,7 @@
 #at index 4 = 25
 #index 5 and 6 are empty
 
+
 #Performace
 #m is number of slots in hash table
 #n is number of keys to be inserted
