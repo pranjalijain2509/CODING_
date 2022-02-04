@@ -1,0 +1,32 @@
+# preorder recursively
+class newNode:
+    def __init__(self ,key):
+        self.data = key
+        self.left = None
+        self.right = None
+def preorder(root):
+    if root==None:
+        return 
+    print(root.data)
+    preorder(root.left)
+    preorder(root.right)
+root = newNode(1)
+root.left = newNode(2)
+root.right = newNode(3)
+root.left.right=newNode(9)
+root.left.right.right=newNode(49)
+root.right.right=newNode(6)
+root.right.right.right=newNode(7)
+root.right.right.right.right=newNode(74)
+preorder(root)
+
+
+Output-
+1
+2
+9
+49
+3
+6
+7
+74
