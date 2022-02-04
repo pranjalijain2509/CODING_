@@ -1,0 +1,34 @@
+# postorder recursively
+class newNode:
+    def __init__(self ,key):
+        self.data = key
+        self.left = None
+        self.right = None
+def postorder(root):
+    if root==None:
+        return
+    postorder(root.left)
+    postorder(root.right)
+    print(root.data)
+    
+    
+root = newNode(1)
+root.left = newNode(2)
+root.right = newNode(3)
+root.left.right=newNode(9)
+root.left.right.right=newNode(49)
+root.right.right=newNode(6)
+root.right.right.right=newNode(7)
+root.right.right.right.right=newNode(74)
+postorder(root)
+
+
+Output-
+49
+9
+2
+74
+7
+6
+3
+1
