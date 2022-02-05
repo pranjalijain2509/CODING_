@@ -13,4 +13,5 @@
   #2. copy old space to new
   #3. free old space
 
+
 #append and pop takes constant time
